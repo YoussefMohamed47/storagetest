@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class Tests extends StatelessWidget {
   final String? contval;
-  Tests({required this.contval});
+  final String? contvalb;
+  Tests({required this.contval, required this.contvalb});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -11,7 +12,13 @@ class Tests extends StatelessWidget {
       ),
       body: Center(
         child: Container(
-          child: Text(contval!),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(contval!),
+              Text(contvalb!),
+            ],
+          ),
         ),
       ),
     );
